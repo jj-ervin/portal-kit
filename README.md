@@ -25,4 +25,6 @@ Portal Kit is not Cockpit UI, Observatory Core, Sealdex, the Governance Commons 
 
 ## Licensing
 
-The repository is public, but no license has been granted yet. The open-source and commercial licensing model is an explicit pending decision; see [ADR-0005](docs/decisions/0005-licensing-and-distribution-pending.md). Until a license is added, normal copyright restrictions apply.
+Portal Kit is licensed under the [GNU Affero General Public License v3.0 only](LICENSE) (`AGPL-3.0-only`). Modified versions offered to users over a network must offer those users the corresponding source as required by the license.
+
+The copyright owner may offer separate commercial licenses in the future. No commercial license or managed service is offered by this repository today. See [ADR-0006](docs/decisions/0006-agpl-community-license.md) and [CONTRIBUTING.md](CONTRIBUTING.md).

@@ -1,6 +1,6 @@
 # ADR-0005: Licensing and distribution model pending
 
-**Status:** proposed
+**Status:** superseded by ADR-0006
 **Date:** 2026-10-22
 
 ## Context
@@ -18,4 +18,4 @@ Before implementation code is publicly distributed, choose and document:
 - package and binary distribution terms; and
 - the boundary, if any, between an open self-hosted product and future paid offerings.
 
-No option is selected by PK-01. Until an explicit license is committed, normal copyright restrictions apply.
+PK-01 intentionally selected no option. ADR-0006 later chose `AGPL-3.0-only` for the public product and preserved the copyright owner's ability to offer separate commercial licenses. The contributor-rights and trademark policies remain future decisions.

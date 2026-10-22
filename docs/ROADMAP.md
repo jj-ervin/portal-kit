@@ -37,7 +37,9 @@ This roadmap describes product sequence, not release dates or current implementa
 - Provide a reproducible supported deployment profile.
 - Prove configuration, upgrade, migration, backup, restore, rollback, and observability.
 - Complete security review and operator documentation.
-- Resolve licensing and contribution policy before public code distribution.
+- Implement AGPL source-offer compliance in every network user interface.
+- Adopt a reviewed contributor-rights policy before accepting outside code or documentation.
+- Verify that every dependency and extracted source is compatible with `AGPL-3.0-only`.
 
 ## Later, explicitly out of current scope
 

@@ -58,7 +58,9 @@ The first supported deployment profile must be self-hosted and reproducible. Sup
 
 ## Licensing and open-source status
 
-The repository's public visibility is not a license. The open-source license, contribution model, commercial terms, trademark policy, and any future managed-service boundary remain undecided. No code extraction may assume a license-compatible dependency path until ADR-0005 is resolved.
+Portal Kit's public community license is `AGPL-3.0-only`. Network-accessible modified versions must offer corresponding source to their users as required by the license. The copyright owner retains the option to offer separate commercial licenses later, but no commercial terms or managed service are defined today.
+
+External code and documentation contributions are not accepted until a contributor agreement or equivalent rights policy is adopted. Dependency and extracted-code compatibility must still be reviewed before reuse; selecting Portal Kit's outbound license does not relicense third-party work. Trademark policy also remains pending. See ADR-0006.
 
 ## Non-goals
 
