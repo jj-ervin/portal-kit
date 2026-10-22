@@ -1,0 +1,21 @@
+# Internal dev docs — local/private only, not for public distribution
+AGENTS.md
+CHATGPT.md
+CLAUDE.md
+DEV-PATH.md
+DEV-PLAN.md
+DEV-RELEASE.md
+DEV-TRACKS.md
+REVIEW-GRAMMAR.md
+MARKET.md
+DIST.md
+
+# Local environment and generated output
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+build/
+coverage/
+*.log
