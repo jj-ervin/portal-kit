@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:portal-kit:contracts:approval-consumption:v1",
+  "$comment": "SPDX-License-Identifier: AGPL-3.0-only",
+  "title": "Portal Kit approval consumption v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "consumption_id", "grant_id", "request_id", "workspace_id", "action", "target", "consumed_at"],
+  "properties": {
+    "schema_version": { "const": "portal-kit.approval-consumption.v1" },
+    "consumption_id": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/identifier" },
+    "grant_id": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/identifier" },
+    "request_id": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/identifier" },
+    "workspace_id": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/identifier" },
+    "action": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/action" },
+    "target": {
+      "allOf": [
+        { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/target" },
+        { "type": "object", "required": ["revision"], "properties": { "revision": {} } }
+      ]
+    },
+    "consumed_at": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/timestamp" }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:portal-kit:contracts:principal-scope:v1",
+  "$comment": "SPDX-License-Identifier: AGPL-3.0-only",
+  "title": "Portal Kit principal and workspace scope v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "principal", "scope"],
+  "properties": {
+    "schema_version": { "const": "portal-kit.principal-scope.v1" },
+    "principal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["subject_id", "status", "trust"],
+      "properties": {
+        "subject_id": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/identifier" },
+        "status": { "enum": ["active", "disabled"] },
+        "trust": { "const": "server_verified" }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["workspace_id"],
+      "properties": {
+        "workspace_id": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/identifier" }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:portal-kit:contracts:approval-requirement:v1",
+  "$comment": "SPDX-License-Identifier: AGPL-3.0-only",
+  "title": "Portal Kit approval requirement v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "requirement_id", "workspace_id", "action", "target", "author_subject_id", "independent_reviewer_required"],
+  "properties": {
+    "schema_version": { "const": "portal-kit.approval-requirement.v1" },
+    "requirement_id": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/identifier" },
+    "workspace_id": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/identifier" },
+    "action": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/action" },
+    "target": {
+      "allOf": [
+        { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/target" },
+        { "type": "object", "required": ["revision"], "properties": { "revision": {} } }
+      ]
+    },
+    "author_subject_id": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/identifier" },
+    "independent_reviewer_required": { "type": "boolean" }
+  }
+}
