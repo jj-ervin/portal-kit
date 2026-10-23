@@ -1,6 +1,6 @@
 # ADR-0008: PK-03 runtime, package, and boundary architecture
 
-**Status:** proposed
+**Status:** accepted
 **Date:** 2026-10-22
 
 ## Context
@@ -126,7 +126,7 @@ Each step requires its own scoped tests and may be committed separately on the P
 - No GC Portal or Cockpit source, schema, test, prompt, fixture, role, action, or data model is copied or mechanically translated.
 - The proposed third-party dependency and license are recorded before installation.
 - The package graph and audit-delivery rules are explicit and fail closed.
-- PK-03 implementation begins only after this ADR is reviewed and its status becomes `accepted`.
+- Architecture review is complete: PR #2 merged this ADR and established its status as `accepted` before PK-03 implementation.
 
 ## Consequences
 

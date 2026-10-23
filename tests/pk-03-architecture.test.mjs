@@ -15,10 +15,10 @@ const adrPath = join(
 );
 const adr = readFileSync(adrPath, "utf8");
 
-test("PK-03 architecture ADR is proposed and implementation remains gated", () => {
-  assert.match(adr, /\*\*Status:\*\* proposed/);
-  assert.match(adr, /implementation begins only after this ADR is reviewed/i);
-  assert.match(adr, /status becomes `accepted`/);
+test("PK-03 architecture ADR records accepted review state", () => {
+  assert.match(adr, /\*\*Status:\*\* accepted/);
+  assert.match(adr, /PR #2 merged this ADR/i);
+  assert.match(adr, /before PK-03 implementation/i);
 });
 
 test("runtime, package, schema, and test choices are explicit", () => {
