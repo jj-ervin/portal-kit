@@ -6,7 +6,7 @@ The Governance Commons Portal is the first intended consumer and reference imple
 
 ## Current status
 
-**Contract only. No runtime, package, deployment, extension SDK, or compatibility claim exists yet.**
+**Contract and extraction inventory only. No runtime, package, deployment, extension SDK, or compatibility claim exists yet.**
 
 PK-01 establishes the product boundary before extraction:
 
@@ -16,6 +16,9 @@ PK-01 establishes the product boundary before extraction:
 - [Integration contracts](docs/INTEGRATION-CONTRACTS.md)
 - [Roadmap](docs/ROADMAP.md)
 - [Architecture decisions](docs/decisions/README.md)
+- [PK-02 extraction inventory](docs/extraction/PK-02-INVENTORY.md)
+- [Machine-readable source manifest](docs/extraction/pk-02-source-inventory.json)
+- [PK-02B repository architecture audit](docs/audits/PK-02B-REPOSITORY-ARCHITECTURE-AUDIT.md)
 
 ## Product position
 

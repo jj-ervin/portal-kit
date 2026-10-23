@@ -13,10 +13,14 @@ This roadmap describes product sequence, not release dates or current implementa
 
 ## PK-02 — Extraction inventory and provenance
 
+**Status:** complete at the documentation level
+
 - Inventory reusable seams in GC Portal and Cockpit at immutable revisions.
 - Classify code as platform-generic, consumer-specific, third-party, or unsuitable for extraction.
 - Verify licenses, authorship, dependencies, and test coverage.
 - Propose the smallest extraction slice; require review before copying code.
+
+Result: [PK-02 inventory](extraction/PK-02-INVENTORY.md), [PK-02B repository architecture audit](audits/PK-02B-REPOSITORY-ARCHITECTURE-AUDIT.md), and [ADR-0007](decisions/0007-first-implementation-slice.md). No code moved. The selected PK-03 starting point is a freshly authored, domain-neutral security-contract kernel; source reuse remains blocked on explicit inbound rights and compatibility review. PK-03 has not started and requires architectural review of the audit first.
 
 ## PK-03 — Core contracts and architecture proof
 
