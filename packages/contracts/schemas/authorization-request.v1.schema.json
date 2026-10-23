@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:portal-kit:contracts:authorization-request:v1",
+  "$comment": "SPDX-License-Identifier: AGPL-3.0-only",
+  "title": "Portal Kit authorization request v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "request_id", "context", "action", "target", "requested_at"],
+  "properties": {
+    "schema_version": { "const": "portal-kit.authorization-request.v1" },
+    "request_id": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/identifier" },
+    "context": { "$ref": "urn:portal-kit:contracts:principal-scope:v1" },
+    "action": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/action" },
+    "target": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/target" },
+    "requested_at": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/timestamp" }
+  }
+}

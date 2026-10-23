@@ -1,6 +1,6 @@
 # Contributing to Portal Kit
 
-Portal Kit is currently defining its architecture and has not begun code extraction.
+Portal Kit has begun fresh implementation of its accepted architecture. No code extraction from GC Portal, Cockpit, or adjacent products has been approved.
 
 ## What is welcome now
 

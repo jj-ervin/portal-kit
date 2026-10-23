@@ -24,7 +24,7 @@ Result: [PK-02 inventory](extraction/PK-02-INVENTORY.md), [PK-02B repository arc
 
 ## PK-03 — Core contracts and architecture proof
 
-**Status:** architecture accepted; implementation not started
+**Status:** architecture accepted; first contracts slice in progress
 
 - Select runtime, package, persistence, and configuration architecture.
 - Define versioned module, identity, authorization, audit, approval, and provider interfaces.
@@ -32,6 +32,8 @@ Result: [PK-02 inventory](extraction/PK-02-INVENTORY.md), [PK-02B repository arc
 - Demonstrate no-AI, local-only operation.
 
 Accepted architecture: [ADR-0008](decisions/0008-pk-03-runtime-package-and-boundary-architecture.md). PR #2 completed the architecture-review gate; implementation remains a separate next step.
+
+Current implementation artifact: [PK-03 dependency and provenance record](implementation/PK-03-DEPENDENCIES-AND-PROVENANCE.md). The first branch is limited to the npm workspace and domain-neutral contracts; kernel, ports, persistence, UI, providers, and consumer adoption remain deferred.
 
 ## PK-04 — First reusable platform slice
 

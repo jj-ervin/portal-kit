@@ -6,7 +6,7 @@ The Governance Commons Portal is the first intended consumer and reference imple
 
 ## Current status
 
-**Contract, extraction inventory, and proposed PK-03 architecture only. No runtime, package, deployment, extension SDK, or compatibility claim exists yet.**
+**PK-03 architecture is accepted and the first internal contracts package is in implementation. No runtime composition, persistence, deployment, extension SDK, published package, or consumer compatibility claim exists yet.**
 
 PK-01 establishes the product boundary before extraction:
 
@@ -19,6 +19,18 @@ PK-01 establishes the product boundary before extraction:
 - [PK-02 extraction inventory](docs/extraction/PK-02-INVENTORY.md)
 - [Machine-readable source manifest](docs/extraction/pk-02-source-inventory.json)
 - [PK-02B repository architecture audit](docs/audits/PK-02B-REPOSITORY-ARCHITECTURE-AUDIT.md)
+- [PK-03 dependency and provenance record](docs/implementation/PK-03-DEPENDENCIES-AND-PROVENANCE.md)
+
+## Development
+
+The current implementation baseline is Node.js 24 or later. Install the exact locked dependencies and run the complete repository suite:
+
+```powershell
+npm ci
+npm test
+```
+
+`@portal-kit/contracts` contains freshly authored Draft 2020-12 schemas and fail-closed validation for principal/workspace scope, authorization, revision-bound approvals, and redacted audit events. It is private and not published.
 
 ## Product position
 

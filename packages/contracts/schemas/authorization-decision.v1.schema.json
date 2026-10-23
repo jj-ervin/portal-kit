@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:portal-kit:contracts:authorization-decision:v1",
+  "$comment": "SPDX-License-Identifier: AGPL-3.0-only",
+  "title": "Portal Kit authorization decision v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "request_id", "action", "workspace_id", "target", "outcome", "reason_code", "decided_at"],
+  "properties": {
+    "schema_version": { "const": "portal-kit.authorization-decision.v1" },
+    "request_id": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/identifier" },
+    "action": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/action" },
+    "workspace_id": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/identifier" },
+    "target": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/target" },
+    "outcome": { "enum": ["allow", "deny"] },
+    "reason_code": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 96,
+      "pattern": "^[A-Z][A-Z0-9_]+$"
+    },
+    "decided_at": { "$ref": "urn:portal-kit:contracts:shared:v1#/$defs/timestamp" }
+  }
+}

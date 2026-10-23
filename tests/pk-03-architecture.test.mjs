@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 
 import assert from "node:assert/strict";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
@@ -74,7 +74,10 @@ test("deferred infrastructure and external ownership remain explicit", () => {
   }
 });
 
-test("ADR-only change creates no implementation package directories", () => {
-  assert.equal(existsSync(join(root, "packages")), false);
+test("implementation remains inside the accepted contracts-only boundary", () => {
+  assert.deepEqual(readdirSync(join(root, "packages")), ["contracts"]);
+  assert.equal(existsSync(join(root, "packages", "kernel")), false);
+  assert.equal(existsSync(join(root, "packages", "ports")), false);
+  assert.equal(existsSync(join(root, "packages", "testing")), false);
   assert.equal(existsSync(join(root, "src")), false);
 });
