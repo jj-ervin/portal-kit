@@ -9,6 +9,6 @@
 | [0005](0005-licensing-and-distribution-pending.md) | superseded | Recorded the licensing decision while it was pending. |
 | [0006](0006-agpl-community-license.md) | accepted | Use `AGPL-3.0-only` for the public product and preserve the option for separate commercial licenses. |
 | [0007](0007-first-implementation-slice.md) | accepted | Start with a new domain-neutral security-contract kernel; copy no GC Portal or Cockpit code. |
-| [0008](0008-pk-03-runtime-package-and-boundary-architecture.md) | proposed | Use Node, ESM, npm workspaces, JSON Schema, pure policy packages, and fail-closed audit delivery for PK-03. |
+| [0008](0008-pk-03-runtime-package-and-boundary-architecture.md) | accepted | Use Node, ESM, npm workspaces, JSON Schema, pure policy packages, and fail-closed audit delivery for PK-03. |
 
 Accepted ADRs define the current direction. Proposed ADRs record an unresolved decision and must not be treated as authorization to implement a particular choice. Superseded ADRs remain as decision history.

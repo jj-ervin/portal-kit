@@ -24,14 +24,14 @@ Result: [PK-02 inventory](extraction/PK-02-INVENTORY.md), [PK-02B repository arc
 
 ## PK-03 — Core contracts and architecture proof
 
-**Status:** in progress at the architecture-review level; implementation not started
+**Status:** architecture accepted; implementation not started
 
 - Select runtime, package, persistence, and configuration architecture.
 - Define versioned module, identity, authorization, audit, approval, and provider interfaces.
 - Build contract fixtures and negative tests without GC-specific semantics.
 - Demonstrate no-AI, local-only operation.
 
-Current review artifact: [ADR-0008](decisions/0008-pk-03-runtime-package-and-boundary-architecture.md). Its status is `proposed`; implementation remains gated on acceptance.
+Accepted architecture: [ADR-0008](decisions/0008-pk-03-runtime-package-and-boundary-architecture.md). PR #2 completed the architecture-review gate; implementation remains a separate next step.
 
 ## PK-04 — First reusable platform slice
 
