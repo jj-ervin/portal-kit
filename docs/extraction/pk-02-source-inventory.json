@@ -1,0 +1,149 @@
+{
+  "schema_version": "portal-kit.pk-02-source-inventory.v1",
+  "inspection_date": "2026-10-22",
+  "outcome": "inventory_only_no_source_moved",
+  "repositories": [
+    {
+      "name": "governance-commons-portal",
+      "remote": "https://github.com/governancecommons/governance-commons-portal.git",
+      "revision": "85b17af949bb4112131eb1f150a6ab7083abf59e",
+      "branch": "main",
+      "visibility": "private",
+      "clean_and_equal_to_origin_main": true,
+      "license_grant_found": false,
+      "validation": {
+        "command": "npm test",
+        "passed": 191,
+        "failed": 0,
+        "limits": [
+          "Node SQLite API reported experimental",
+          "source behavior only",
+          "no deployment or Portal Kit compatibility proof"
+        ]
+      },
+      "candidates": [
+        {
+          "path": "src/auth/authorize.mjs",
+          "git_blob": "ce7d1e02e867ae8e897a589e8ee65d05addb7f35",
+          "sha256": "1d040cb3b95e469d2b06e56bce408879b995637f8359bb44273a43de95159b3a",
+          "lines": 23,
+          "classification": "contract_reference",
+          "disposition": "fresh_domain_neutral_contract_no_source_copy"
+        },
+        {
+          "path": "src/auth/workspace-identity.mjs",
+          "git_blob": "4f3838baeae11577fe578249f58b1101dd6aee47",
+          "sha256": "d68a6aff6f65a5b6bd3f61432d5bd96d88893b0df0e0b1f223d88df90122457f",
+          "lines": 16,
+          "classification": "contract_reference",
+          "disposition": "retain_scope_invariant_not_identity_or_role_implementation"
+        },
+        {
+          "path": "src/storage/records.mjs",
+          "git_blob": "2f7b16d74dd30d8953ff0fb708f96008ed4a5795",
+          "sha256": "fe09270e8930e5e183a72f4f38f55bf1086b5919ccdfccf602c5797036c89a79",
+          "lines": 13,
+          "classification": "contract_reference",
+          "disposition": "fresh_revision_and_audit_envelopes_no_storage_copy"
+        },
+        {
+          "path": "src/cockpit-adapter.mjs",
+          "git_blob": "3e1dc593f7cbe4d6a81f4b9763aac27a3fa306cd",
+          "sha256": "6199dd566c7dffd6d411fe8f079db3ff5132aba82de5da3b2dd2df37a95cab26",
+          "lines": 34,
+          "classification": "consumer_owned_adapter",
+          "disposition": "remain_in_gc_portal"
+        },
+        {
+          "path": "src/agent/model-gateway.mjs",
+          "git_blob": "bb030500510bba6af94cff9c976ad1a35daa1a55",
+          "sha256": "1caedc628728f38a303baa053bf7ff9ea29c46532fa2192743d6a3939e4314d9",
+          "lines": 33,
+          "classification": "deferred_provider_seam",
+          "disposition": "later_provider_neutral_design_no_prompt_or_code_copy"
+        },
+        {
+          "path": "src/intelligence/configured-release.mjs",
+          "git_blob": "c254b48f4851f1e77a6c3996f962ed2259e67c31",
+          "sha256": "28210ed41e60d942268ea328f042517643ec7713729e0152e9d4df82a523aca4",
+          "lines": 107,
+          "classification": "consumer_integration_owned",
+          "disposition": "remain_in_gc_portal"
+        },
+        {
+          "path": "src/integrations/sealdex-reference.mjs",
+          "git_blob": "bf9766bdbf8c373848391ea46efe6966fa01dd8e",
+          "sha256": "d182143d9c00f1b46f4114eb549dc044fc09175d952161ac4ffb527b3495cd87",
+          "lines": 20,
+          "classification": "consumer_integration_owned",
+          "disposition": "remain_in_gc_portal"
+        }
+      ]
+    },
+    {
+      "name": "cockpit",
+      "remote": "https://github.com/jj-ervin/cockpit.git",
+      "revision": "3ced7d307d57f30b77866cc41741a0895d249db5",
+      "branch": "main",
+      "visibility": "private",
+      "clean_and_equal_to_origin_main": true,
+      "license_grant_found": false,
+      "validation": {
+        "command": "node --test selected App Shell and application adapter tests",
+        "passed": 21,
+        "failed": 0,
+        "limits": [
+          "targeted source and candidate checks only",
+          "no approved release artifact",
+          "no real-browser proof",
+          "no redistribution permission"
+        ]
+      },
+      "candidates": [
+        {
+          "path": "web/appShell.js",
+          "git_blob": "52fd10f83a4983e2220a2488541bfe651348e784",
+          "sha256": "d414c96c59296aaa11265ca291ad0e4912bc178ad57747b2da22d2566296cb8b",
+          "lines": 211,
+          "classification": "external_ui_dependency_candidate",
+          "disposition": "do_not_copy_require_license_and_immutable_distribution"
+        },
+        {
+          "path": "web/cockpitApplication.js",
+          "git_blob": "c34c0b53fc9cc3c82348040e76968bc3304382dc",
+          "sha256": "7d7e8dc0e88438d2701949e4e8963ad3717535c28731b46a639fd6be1f1d75bd",
+          "lines": 25,
+          "classification": "cockpit_consumer_owned_adapter",
+          "disposition": "remain_in_cockpit"
+        },
+        {
+          "path": "web/cockpitState.js",
+          "git_blob": "0f0416fe39692a0cfa5be12df198f521cd38c203",
+          "sha256": "675c28993146fd50c2fd509f987cae26430ba111d10bba040e22ef5194650d81",
+          "lines": 107,
+          "classification": "cockpit_owned_state_contract",
+          "disposition": "do_not_extract"
+        }
+      ]
+    }
+  ],
+  "selected_first_slice": {
+    "name": "domain_neutral_security_contract_kernel",
+    "implementation": "fresh_authorship_no_source_copy",
+    "contracts": [
+      "principal_scope",
+      "authorization_request_and_decision",
+      "revision_bound_approval",
+      "redacted_audit_event"
+    ],
+    "excluded": [
+      "authentication_provider",
+      "persistence",
+      "gc_workflows",
+      "ai",
+      "cockpit_ui_source",
+      "deployment",
+      "extensions"
+    ]
+  }
+}
