@@ -6,7 +6,7 @@ The Governance Commons Portal is the first intended consumer and reference imple
 
 ## Current status
 
-**Contract and extraction inventory only. No runtime, package, deployment, extension SDK, or compatibility claim exists yet.**
+**Contract, extraction inventory, and proposed PK-03 architecture only. No runtime, package, deployment, extension SDK, or compatibility claim exists yet.**
 
 PK-01 establishes the product boundary before extraction:
 
